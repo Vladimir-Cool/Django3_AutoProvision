@@ -1,0 +1,22 @@
+{% extends 'MainProject/main.html' %}
+
+{% block title %}Content{% endblock %}
+
+{% block content %}
+<form action="{{ data.get_delete_url }}" method="get">
+    {% csrf_token %}
+    <div class="card color-card mt-3" style="max-width: 30rem;">
+        <div class="card-header">{{ data.name_type }}</div>
+        <div class="card-body">
+            <h6 class="card-title">Платформа - {{ data.softswitch }}</h6>
+            <p class="card-text">Портов - {{ data.ports }}</p>
+            <p class="card-text">Шаболон конфигурации  -  {{ data.template_file }}</p>
+            <p class="card-text">ФАЙЛ - "{{ data.template_file.url }}"</p>
+            <div class="card-button">
+                <a href="{{ data.get_update_url }}" class="btn color-button">Править</a>
+                <button method="submit" class="btn btn-danger">Удалить</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

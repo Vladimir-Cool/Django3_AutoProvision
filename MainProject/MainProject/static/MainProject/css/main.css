@@ -1,0 +1,125 @@
+html {
+    width: 100%;
+}
+
+.row {
+    margin: 0;
+}
+
+/* Цветовая подборка */
+.color-main {
+    background-color: #1a0838;
+}
+
+.color-second {
+    background-color: #262626;
+}
+
+body,
+.left-section-card {
+    background-color:#423c43;
+}
+
+.color-card {
+    background-color: #746b94;
+}
+
+.table {
+    border-color: #262626;
+}
+
+.color-button {
+    background-color: #a267bd;
+    color: #1a0838;
+}
+.color-button:hover {
+    background-color: #1a0838;
+    color: #a267bd;
+}
+
+p, 
+h1,
+.nav-link {   
+    color: rgb(234, 206, 231);
+}
+/* color end */
+
+
+.left-column,
+.center-column {
+    height: 100vh;
+}
+
+/* Левая колонка */
+.left-section-card>p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-section-card>p>a {
+    text-decoration: none;
+}
+
+
+
+
+
+.create-card>p {
+    margin-top: 0.2em;
+}
+
+
+/* Круглые углы для всех карт */
+.card {
+    border-radius: 1em;
+}
+
+.card-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* для сообщения errors */
+.errorlist {
+  margin: 0;
+}
+
+
+
+
+
+/*Красивая кнопка*/
+.shine-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fe6637;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #4B0082;
+  transition: .2s ease-in-out;
+}
+.shine-button:before {
+  content: "";
+  background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+.shine-button:hover {
+  background: #4B0082;
+  color: #fff;
+}
+.shine-button:hover:before {
+  left: 150px;
+  transition: .5s ease-in-out;
+}
+
+
+

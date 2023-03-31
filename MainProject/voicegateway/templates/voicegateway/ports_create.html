@@ -1,0 +1,36 @@
+{% extends 'MainProject/main.html' %}
+
+{% block title %}Добавление ГШ{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'ports_create' %}" method="post">
+  <div class="card color-card mt-3" style="max-width: 35rem;">
+    <div class="card-header">Введите конфигурацию</div>
+    <div class="card-body ">
+      <div class="row">
+        {% csrf_token %}
+          {% for el in form %}
+          {% if el.errors %}
+          <div class="alert alert-danger my-0">
+            {{ el.errors }}
+          </div>
+          {% endif %}
+        {% endfor %}
+
+        <div class="col-lg-6 create-card">
+          <p>Выберете ГШ<br>{{ form.gateway }}</p>
+          <p>номер порта<br>{{ form.number_ports }}</p>
+          <p>Логин<br>{{ form.login }}</p>
+          <p>Пароль<br>{{ form.password }}</p>
+        </div>
+
+
+        <button type="submit" class="btn color-button">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+{% endblock %}

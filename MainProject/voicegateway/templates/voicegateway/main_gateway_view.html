@@ -1,0 +1,23 @@
+{% extends 'MainProject/main.html' %}
+
+{% block title %}Content{% endblock %}
+
+{% block content %}
+<form action="{{ data.get_delete_url }}" method="get">
+    {% csrf_token %}
+    <div class="card color-card mt-3" style="max-width: 30rem;">
+        <div class="card-header">{{ data.name_gw }}</div>
+        <div class="card-body">
+            <h6 class="card-title">{{ data.type }}</h6>
+            <p class="card-text">ip адресс - {{ data.ip }}<br> MAC адресс - {{ data.mac }}</p>
+            <a href="{{ data.get_render_url }}" class="btn color-button">Собрать конфиг</a><br>
+
+            <div class="card-button">
+                <a href="{{ data.get_ubdate_url }}" class="btn color-button">Править</a>
+                <button method="submit" class="btn btn-danger">Удалить</button>
+            </div>
+            
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'MainProject/main.html' %}
+
+{% block title %}Content{% endblock %}
+
+{% block main %}
+    <div class="content">
+        <h1>{{ title }}</h1>
+        <h1>Сдесь будет стартовая страница по работе с конфигурацией</h1>
+        <p>Что то то то то то</p>
+        <button type="button" class="btn btn-primary"><a href="{% url 'home' %}">Добавить ГШ</a></button>
+    </div>
+{% endblock %}

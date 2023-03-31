@@ -1,0 +1,21 @@
+{% extends 'MainProject/main.html' %}
+
+{% block title %}Content{% endblock %}
+
+{% block content %}
+<h1>Таблица голосовых шлюзов</h1>
+<p></p>
+{% for el in data %}
+
+<div class="card color-card mt-3" style="max-width: 30rem;">
+  <div class="card-header">{{ el.gateway }}</div>
+  <div class="card-body">
+    <h5 class="card-title">Номер порта - {{ el.number_ports }}</h5>
+    <p class="card-text">Логин - {{ el.login }}<br>Пароль - {{ el.password }}</p>
+    <a href="#" class="btn color-button">Править</a>
+    <a href="#" class="btn btn-danger">Удалить</a>
+  </div>
+</div>
+
+{% endfor %}
+{% endblock %}

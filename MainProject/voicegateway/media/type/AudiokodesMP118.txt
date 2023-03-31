@@ -1,0 +1,14 @@
+Привет
+Это голосовой шлюз {{ name_gw }}
+его ip фдресс {{ ip }} а мак адресс {{ mac }}
+
+Логины пароли
+Первый порт {{ login1 }}  /  {{ password1 }}
+второй порт {{ login2 }}  /  {{ password2 }}
+трерий порт {{ login3 }}  /  {{ password3 }}
+четвертый порт {{ login4 }}  /  {{ password4 }}
+пятный порт {{ login5 }}  /  {{ password5 }}
+шестой порт {{ login6 }}  /  {{ password6 }}
+седьмой порт {{ login7 }}  /  {{ password7 }}
+восьмой порт {{ login8 }}  /  {{ password8 }}
+

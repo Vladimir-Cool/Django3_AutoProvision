@@ -1,0 +1,38 @@
+{% extends 'MainProject/main.html' %}
+
+{% block title %}Изменение ГШ{% endblock %}
+
+{% block content %}
+
+<form action="{{ form.get_update_url }}" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    <div class="card color-card mt-3" style="max-width: 35rem;">
+        <div class="card-header">Введите конфигурацию</div>
+        <div class="card-body ">
+            <div class="row">
+                {% for el in form %}
+                    {% if el.errors %}
+                    <div class="alert alert-danger my-0">
+                        {{ el.errors }}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+
+                <div class="col-lg-6 create-card">
+                    <p>Название типа<br>{{ form.name_type }}</p>
+                    <p>Платформа<br>{{ form.softswitch }}</p>
+                    <p>Количество портов<br>{{ form.ports }}</p>
+                    <p>Шаблон конфигурации<br>{{ form.template_file }}</p>
+                </div>
+
+
+                <button type="submit" class="btn color-button">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+{% endblock %}

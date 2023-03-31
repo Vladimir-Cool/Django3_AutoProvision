@@ -1,0 +1,22 @@
+{% extends 'MainProject/main.html' %}
+
+{% block title %}Content{% endblock %}
+
+{% block content %}
+<h1>Таблица типов голосовых шлюзов</h1>
+
+  
+{% for el in data %}
+
+<div class="card color-card mt-3" style="max-width: 30rem;">
+  <div class="card-header">{{ el.name_type }}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{ el.softswitch }}</h5>
+    <p class="card-text">Количество портов - {{ el.ports }}</p>
+    <a href="{{ el.get_absolute_url }}" class="btn color-button">Просмотреть</a>
+
+  </div>
+</div>
+
+{% endfor %}
+{% endblock %}
